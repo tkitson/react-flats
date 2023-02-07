@@ -4,10 +4,10 @@ import Marker from './marker';
 
 const defaultProps = {
   center: {
-    lat: 10.99835602,
-    lng: 77.01502627
+    lat: 48.85477,
+    lng: 2.29451
   },
-  zoom: 11
+  zoom: 9.5
 };
 
 
@@ -16,7 +16,7 @@ class SimpleMap extends Component {
   render() {
     const center = {
       lat: this.props.lat,
-      lng: this.props.long
+      lng: this.props.lng
     }
     return (
     // Important! Always set the container height explicitly
@@ -27,7 +27,8 @@ class SimpleMap extends Component {
         defaultZoom={defaultProps.zoom}
       >
       <Marker
-          center={center}
+          lat={center.lat}
+          lng={center.lng}
           text="My Marker"
         />
       </GoogleMapReact>
