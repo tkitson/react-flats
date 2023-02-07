@@ -9,16 +9,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lat: 10.99835602,
-      lng: 77.01502627
+      lat: 40.99835602,
+      lng: 37.01502627
     }
 
     this.select();
   }
 
-  select = (flat) => {
+  select = (lat, lng) => {
     this.setState({
-      center: {lat: flat.lat, lng: flat.lng},
+      lat: lat,
+      lng: lng
     });
   }
 
@@ -30,7 +31,7 @@ class App extends Component {
           <Flatlist selectFunction={this.select}/>
         </div>
         <div className='map-container'>
-          <SimpleMap lat={this.state.lat} long={this.state.long}/>
+          <SimpleMap lat={this.state.lat} lng={this.state.lng}/>
         </div>
       </div>
     );

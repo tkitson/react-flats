@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Flat extends Component {
   handleClick = () => {
-    this.props.selectFunction(this.props.id)
+    this.props.selectFunction(this.props.lat, this.props.lng)
   }
 
   render () {
@@ -16,7 +16,7 @@ class Flat extends Component {
           <div className="card-description">
             <h2>{this.props.name}</h2>
           </div>
-          <a className="card-link" alt="link" href="#" onClick={this.handleClick}/>
+          <a className="card-link" title="link" href="#" onClick={this.handleClick}/>
     </div>
     );
   }

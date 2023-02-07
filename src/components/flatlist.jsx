@@ -6,7 +6,7 @@ class Flatlist extends Component {
 
   renderList = () => {
     return flats.map(flat => {
-      return <Flat img={flat.imageUrl} price={flat.price} name={flat.name} selectFunction={this.props.selectFunction}/>
+      return <Flat img={flat.imageUrl} price={flat.price} name={flat.name} selectFunction={this.props.selectFunction} lat={flat.lat} lng={flat.lng}/>
     })
   }
   render () {
